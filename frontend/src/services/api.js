@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const API = axios.create({
-  baseURL: "http://localhost:5001/api",
+  baseURL: "https://workflow-app-1-xg74.onrender.com/api",
   withCredentials: true,
 })
 
