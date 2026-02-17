@@ -1,0 +1,484 @@
+/* Register page - SaaS enterprise onboarding split layout */
+
+.register-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ----- Left panel (blue) ----- */
+.register-panel-left {
+  background: linear-gradient(160deg, #1e3a5f 0%, #0f172a 50%, #0c1222 100%);
+  color: #fff;
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-panel-inner {
+  max-width: 28rem;
+  margin: auto 0;
+}
+
+.register-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.register-logo {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.register-logo svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.register-brand-text {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.register-headline {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  margin: 0 0 2.5rem;
+  color: #fff;
+}
+
+.register-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.register-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.register-feature-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.register-feature-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.register-feature:hover .register-feature-icon {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.register-feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.register-feature-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.register-feature-desc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+/* ----- Right panel (form) ----- */
+.register-panel-right {
+  background: #f1f5f9;
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.register-form-wrap {
+  width: 100%;
+  max-width: 26rem;
+}
+
+.register-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  padding: 2.25rem;
+}
+
+.register-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.register-card-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 1.75rem;
+  line-height: 1.45;
+}
+
+/* ----- Form ----- */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.register-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.register-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.register-input {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+}
+
+.register-input::placeholder {
+  color: #94a3b8;
+}
+
+.register-input:hover {
+  border-color: #94a3b8;
+}
+
+.register-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.register-input-with-toggle {
+  padding-right: 2.75rem;
+}
+
+.register-toggle-password {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.register-toggle-password:hover {
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+.register-toggle-password svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* Password strength bar */
+.register-strength-bar {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.35rem;
+}
+
+.register-strength-segment {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: #e2e8f0;
+  transition: background 0.2s ease;
+}
+
+.register-strength-segment.register-strength-on {
+  background: #2563eb;
+}
+
+.register-strength-segment.register-strength-on:nth-child(1) { background: #ef4444; }
+.register-strength-segment.register-strength-on:nth-child(2) { background: #f59e0b; }
+.register-strength-segment.register-strength-on:nth-child(3) { background: #eab308; }
+.register-strength-segment.register-strength-on:nth-child(4) { background: #22c55e; }
+
+/* Override: when only 1–2 segments, use red/amber; 3–4 use green */
+.register-strength-bar .register-strength-segment:nth-child(n+3).register-strength-on {
+  background: #22c55e;
+}
+
+.register-strength-bar .register-strength-segment:nth-child(1).register-strength-on { background: #ef4444; }
+.register-strength-bar .register-strength-segment:nth-child(2).register-strength-on { background: #f59e0b; }
+.register-strength-bar .register-strength-segment:nth-child(3).register-strength-on { background: #eab308; }
+.register-strength-bar .register-strength-segment:nth-child(4).register-strength-on { background: #22c55e; }
+
+/* Checkbox */
+.register-agree {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.register-checkbox {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.2rem 0 0;
+  accent-color: #2563eb;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.register-agree-label {
+  font-size: 0.8125rem;
+  color: #475569;
+  line-height: 1.4;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Submit button */
+.register-submit {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.register-submit:hover {
+  background: #1d4ed8;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+}
+
+.register-submit:active {
+  transform: scale(0.99);
+}
+
+.register-submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.register-submit svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* Divider */
+.register-divider {
+  margin: 1.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.register-divider::before,
+.register-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.register-divider-text {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+}
+
+/* Google button */
+.register-google {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-google:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.register-google:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.register-google-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Footer link */
+.register-footer {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: center;
+  margin: 1.25rem 0 0;
+  line-height: 1.5;
+}
+
+.register-link {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.register-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 1023px) {
+  .register-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .register-panel-left {
+    padding: 1.5rem 1.5rem 2rem;
+  }
+
+  .register-panel-inner {
+    max-width: none;
+    margin: 0;
+  }
+
+  .register-brand {
+    margin-bottom: 2rem;
+  }
+
+  .register-headline {
+    font-size: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .register-features {
+    gap: 1.25rem;
+  }
+
+  .register-panel-right {
+    padding: 1.5rem 1rem 2rem;
+    align-items: flex-start;
+  }
+
+  .register-card {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .register-panel-left {
+    padding: 1.25rem 1rem 1.5rem;
+  }
+
+  .register-headline {
+    font-size: 1.35rem;
+  }
+
+  .register-feature {
+    gap: 0.75rem;
+  }
+
+  .register-feature-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .register-card {
+    padding: 1.5rem;
+  }
+
+  .register-card-title {
+    font-size: 1.35rem;
+  }
+}

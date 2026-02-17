@@ -1,0 +1,340 @@
+/* Login page - modern SaaS dashboard style */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ----- Header ----- */
+.login-header {
+  flex-shrink: 0;
+  padding: 1rem 1.5rem;
+}
+
+.login-header-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.login-logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.login-logo svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.login-brand-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.login-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-status-text {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.login-status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
+
+/* ----- Main & Card ----- */
+.login-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 28rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+}
+
+.login-card-lock {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card-lock svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: center;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.login-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: center;
+  margin: 0 0 1.75rem;
+  line-height: 1.4;
+}
+
+/* ----- Form ----- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.login-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.login-label-row .login-label {
+  margin: 0;
+}
+
+.login-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-input-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.login-input {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 0.75rem 0 2.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  appearance: none;
+}
+
+.login-input::placeholder {
+  color: #94a3b8;
+}
+
+.login-input:hover {
+  border-color: #94a3b8;
+}
+
+.login-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.login-input-with-toggle {
+  padding-right: 2.5rem;
+}
+
+.login-toggle-password {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.login-toggle-password:hover {
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+.login-toggle-password svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.login-remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-checkbox {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.login-remember-label {
+  font-size: 0.875rem;
+  color: #334155;
+  cursor: pointer;
+  user-select: none;
+}
+
+.login-submit {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.login-submit:hover {
+  background: #1d4ed8;
+}
+
+.login-submit:active {
+  transform: scale(0.99);
+}
+
+.login-submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.login-submit svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* ----- Divider & Footer ----- */
+.login-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 1.5rem 0 1rem;
+}
+
+.login-footer {
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.login-link {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.login-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* ----- Responsive ----- */
+@media (min-width: 640px) {
+  .login-header {
+    padding: 1.25rem 2rem;
+  }
+
+  .login-main {
+    padding: 3rem 1.5rem;
+  }
+
+  .login-card {
+    padding: 2.5rem;
+  }
+}
